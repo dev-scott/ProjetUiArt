@@ -1,0 +1,73 @@
+
+  // common rules
+  %button {
+    padding: $p1; 
+    width: 13em;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  // mixin
+  @mixin btn($color-palettes) {
+    @each $color, $palette in $color-palettes {
+    $clr: $color;
+    @debug "creating color rule : button-#{clr}";
+    &-#{$color} {
+       border: map-get($palette, border);
+       background-color: map-get($palette, background-color);
+       color: title-color(map-get($palette, background-color));
+       border-radius: 4px;
+        &:hover {
+          background-color: darken(map-get($palette, background-color), 10%);
+          color: title-color(map-get($palette, background-color));
+          text-decoration: underline;
+        }
+        &:disabled {
+          background-color: lighten(map-get($palette, background-color), 20%);
+          border: 1px solid lighten(map-get($palette, background-color), 10%);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  // mixin btn-outline - bootstrap 5
+
+  // mixin navbar
+  @mixin navbar($color-palettes) { 
+    @each $color, $palette in $color-palettes {
+      $clr: $color;
+      @debug "creating color rule : navbar-#{clr}";
+      &-#{$color} { 
+        background-color: map-get($palette, background-color);
+        color: title-color(map-get($palette, background-color));
+        .nav-link {
+          color: title-color(map-get($palette, background-color));
+          &:hover,
+          &:focus {
+            color: $navbar-light-hover-color;
+          }
+          &.disabled {
+            color: $navbar-light-disabled-color;
+          }
+        }
+        .show > .nav-link,
+        .nav-link.active {
+          color: $navbar-light-active-color;
+        }
+        .navbar-brand {
+          color: title-color(map-get($palette, background-color));
+        }
+      }
+  }
+}
+
+  @function title-color($bg-color) {
+    @if(lightness($bg-color) < lightness(#aaa) ) { 
+        $bg-color: $cloud;
+    } @else {
+        $bg-color: #333;
+    }
+    @return $bg-color;
+  }
+ 

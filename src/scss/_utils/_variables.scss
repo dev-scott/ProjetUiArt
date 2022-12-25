@@ -1,0 +1,81 @@
+
+$max-width: 1180px !default;
+
+$p1: 1em;
+$p2: 2em;
+$p4: 4em;
+
+$turquoise: #1abc9c;
+$river: #3498db;
+$carrot: #e67e22;
+$cloud: #ecf0f1;
+$amethyste: #9b59b6;
+$sun : #f1c40f;
+$alizarin: #e74c3c;
+$concrete: #95a5a6;
+$sass-theme: #BF4080;
+$midnight-blue: #34495e;
+$asbestos : #7f8c8d;
+$pomegranate: #c0392b;
+
+$primary-color: $midnight-blue;
+$secondary-color: $amethyste;
+$base-color: $sass-theme;
+$brand-color: $amethyste;
+
+$theme-light: $cloud;
+$theme-dark: $midnight-blue;
+
+$border-dark: rgba($base-color, 0.88);
+
+$helvetica :Helvetica, sans-serif;
+$lato :  'Lato', sans-serif;
+// font-quicksand
+
+  // ensemble règles spécifiques
+  $color-palettes: (
+    turquoise: (
+      background-color: $turquoise,
+      border: 1px solid darken($turquoise, 10%),
+      border-radius: 4px,
+    ),
+    river: (
+      background-color: $river,
+      border: 1px solid darken($river, 10%),
+    ),
+    carrot: (
+      background-color: $carrot,
+      border: 1px solid darken($carrot, 10%),
+    ),
+    amethyste: (
+      background-color: $amethyste,
+      border: 1px solid darken($amethyste, 10%),
+    ),
+    alyzarin: (
+      background-color: $alizarin,
+      border: 1px solid darken($alizarin, 10%),
+    ),
+    sun: (
+      background-color: $sun,
+      border: 1px solid darken($sun, 10%),
+    ),
+   cloud: (
+      background-color: $cloud,
+      border: 1px solid darken($cloud, 10%),
+    ), 
+    silver: (
+      background-color: $concrete,
+      border: 1px solid darken($concrete, 10%),
+    ),  
+    sass: (
+      background-color: $sass-theme,
+      border: 1px solid darken($sass-theme, 10%),
+    ),  
+    pomegranate: (
+      background-color: $pomegranate,
+      border: 1px solid darken($pomegranate, 10%),
+    ),
+  );
+
+$font-stack: $lato;
+$text-color: $asbestos;
