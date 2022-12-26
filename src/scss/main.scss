@@ -16,11 +16,12 @@
 @import "./_layout/_footer";
 @import "./_layout/_menu";
 
-@import "./_pages/_home";
+@import "./_pages/HomePage/Header.scss";
 
 
 
-
+@import "./_base/base.scss";
+@import "./_base/MediaQuery.scss";
 
 
 

@@ -1,3 +1,5 @@
+@import "../_utils/variables";
+
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
@@ -7,6 +9,23 @@
  */
 html {
   box-sizing: border-box;
+}
+
+body, *,::after,::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+body{
+
+  height: 2500px;
+  background: #4b6cb7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 /**
@@ -29,3 +48,68 @@ a {
   text-decoration: none;
 }
 
+button{
+
+  background-color: $river;
+  color: $white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  transition: 0.4s all ease-in-out;
+  color: $cloud;
+
+  &:hover{
+    background-color: $midnight-blue;
+  }
+
+
+}
+
+.LogoPrimary{
+
+  width: 50px;
+  height: 50px;
+
+}
+
+.nav-center{
+
+  // background-color: blue;
+
+}
+
+
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}

@@ -1,1 +1,231 @@
- 
+@import "../_utils/variables";
+nav {
+
+    // background-color: black;
+    color: white;
+
+    @import "../_base/MediaQuery.scss";
+
+    .nav-center {
+
+        .nav-header {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+
+            @include mobileToDesktop {
+
+                padding: 0;
+
+            }
+
+            .nav-toggle {
+
+                font-size: 1.5rem;
+                // color: blue;
+                background: transparent;
+                border-color: transparent;
+                transition: 0.4s all ease-in-out;
+                cursor: pointer;
+                transform: rotate(90deg);
+
+
+                @include mobileToDesktop {
+                    display: none;
+                }
+
+                // &:hover {
+
+                //     transform: rotate(90deg);
+                // }
+            }
+
+
+            .LogoPrimary {}
+
+
+            .nav-toggle {
+                // background-color: blue;
+            }
+        }
+
+        @include mobileToDesktop {
+
+            // background-color: red;
+            max-width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+    }
+
+    .links-container {
+
+        
+        height: 0;
+        overflow: hidden;
+        transition: 0.4s all ease-in-out;
+
+        @include mobileToDesktop {
+
+            height: auto !important;
+            // background-color: red;
+        }
+
+        .links {
+            list-style: none;
+
+
+            li{
+
+
+            button{
+
+                display: none;
+                @include mobile {
+
+                    display: block;
+                    background-color: transparent;
+                    padding: 0;
+                    // margin-top: 20px;
+                    font-weight: bold;
+
+                    a{
+
+                        
+                       &:hover{
+    
+                       }
+
+                    }
+
+
+                }
+        
+            }
+        }
+
+            li{
+
+                a{
+
+                    
+                    &:hover{
+                        // background-color:blue;
+                    }
+
+                }
+
+                @include mobileToDesktop{
+
+                }
+            }
+
+            @include mobileToDesktop {
+
+                display: flex;
+                
+
+
+            
+            }
+
+            a {
+                
+                font-family: $fontPrimary;
+                color:$cloud;
+                font-size: 1rem;
+                text-transform: capitalize;
+                letter-spacing: 0.1rem;
+                display: block;
+                padding: 0.5rem 2rem;
+                transition: 0.4s all ease-in-out;
+              
+                @include mobileToDesktop {
+                    // padding:0;
+                    // margin:0 0.5rem;
+                }
+
+                &:hover {
+                    color:$white;
+
+                    // background-color:blue;
+                    padding-left: 1.5rem;
+                }
+            }
+
+        }
+
+    }
+
+    // .show-container {
+
+    //     height: 10rem;
+    // }
+
+    .connexion-container {
+list-style: none;
+        display: none;
+
+        @include mobileToDesktop {
+            display: flex;
+        }
+
+        li {
+            &:nth-child(1){
+
+                button{
+                    font-family: $fontPrimary;
+
+
+                    background-color: transparent;
+                    font-weight: bold;
+                    a{
+                        transition: all 0.4s ease-in-out;
+                        opacity: 1;
+
+                        &:hover{
+                            color:rgb(239, 231, 231);
+                            opacity: 0.7;
+                            
+                        }
+
+                    }
+
+                
+
+                }
+
+                
+            }
+            &:nth-child(2){
+
+                button{
+                    font-family: $fontPrimary;
+                    font-weight: bold;
+
+                    padding: 0.5rem 2rem;
+                }
+
+                
+            }
+
+            @include mobileToDesktop {
+                margin: 0 0.5rem;
+
+                a{
+
+                    text-decoration: none;
+                    color: $cloud;
+                }
+            }
+        }
+
+    }
+
+}
