@@ -3,7 +3,7 @@ import {Hero , ArtExemple , Artist , CategorieArt , FAQ , NewLetter } from '../C
 
 const HomePage = () => {
   return (
-    <main>
+    <main className='homePage'>
 
         <Hero/>
         <ArtExemple/>

@@ -27,14 +27,14 @@ export const links = [
 export const Connextion_btn = [
   {
     id: 1,
-    url: 'https://www.twitter.com',
+    url: '/signin',
     text: 'Sign in',
 
   },
 
   {
     id: 2,
-    url: 'https://www.twitter.com',
+    url: '/login',
     text: 'Login',
 
   },

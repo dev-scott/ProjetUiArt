@@ -1,4 +1,5 @@
 @import "../_utils/variables";
+
 nav {
 
     // background-color: black;
@@ -66,7 +67,7 @@ nav {
 
     .links-container {
 
-        
+
         height: 0;
         overflow: hidden;
         transition: 0.4s all ease-in-out;
@@ -81,84 +82,122 @@ nav {
             list-style: none;
 
 
-            li{
+            li {
 
 
-            button{
+                button {
 
-                display: none;
-                @include mobile {
+                    display: none;
 
-                    display: block;
-                    background-color: transparent;
-                    padding: 0;
-                    // margin-top: 20px;
-                    font-weight: bold;
+                    @include mobile {
 
-                    a{
+                        display: block;
+                        background-color: transparent;
+                        padding: 0;
+                        // margin-top: 20px;
+                        font-weight: bold;
 
-                        
-                       &:hover{
-    
-                       }
+                        a {
+
+
+                            &:hover {}
+
+                        }
+
 
                     }
 
-
                 }
-        
             }
-        }
 
-            li{
+            li {
+                transition: 0.4s all ease-in-out;
 
-                a{
+                .active_link{
+                    transition: 0.4s all ease-in-out;
+                   background-color: rgba(192, 177, 177, 0.186);
 
-                    
-                    &:hover{
+                    position: relative;
+        
+                }
+
+                a {
+
+
+                    &:hover {
                         // background-color:blue;
                     }
 
                 }
 
-                @include mobileToDesktop{
-
-                }
+                @include mobileToDesktop {}
             }
 
             @include mobileToDesktop {
 
                 display: flex;
-                
 
 
-            
+
+
             }
 
             a {
-                
+
                 font-family: $fontPrimary;
-                color:$cloud;
+                color: $cloud;
                 font-size: 1rem;
                 text-transform: capitalize;
                 letter-spacing: 0.1rem;
                 display: block;
                 padding: 0.5rem 2rem;
                 transition: 0.4s all ease-in-out;
-              
+
                 @include mobileToDesktop {
                     // padding:0;
                     // margin:0 0.5rem;
                 }
 
                 &:hover {
-                    color:$white;
+                    color: $white;
 
                     // background-color:blue;
                     padding-left: 1.5rem;
                 }
             }
 
+            .select{
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-color: rgba(192, 177, 177, 0.186);
+                color: $white;
+                position: relative;
+                border: none;
+                outline: none;
+                padding: 0 0.5rem;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+
+                -webkit-appearance: textfield;
+                -webkit-box-sizing: content-box;
+                  -moz-box-sizing : content-box;
+                       box-sizing : content-box;
+                -webkit-border-radius: 3px;
+                   -moz-border-radius: 3px;
+                        border-radius: 3px;
+                -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+                   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+                        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+                -webkit-transition: all 0.2s linear;
+                   -moz-transition: all 0.2s linear;
+                     -o-transition: all 0.2s linear;
+                        transition: all 0.2s linear;
+    
+
+            }
         }
 
     }
@@ -169,7 +208,7 @@ nav {
     // }
 
     .connexion-container {
-list-style: none;
+        list-style: none;
         display: none;
 
         @include mobileToDesktop {
@@ -177,48 +216,52 @@ list-style: none;
         }
 
         li {
-            &:nth-child(1){
+            &:nth-child(1) {
 
-                button{
+                button {
                     font-family: $fontPrimary;
 
 
                     background-color: transparent;
                     font-weight: bold;
-                    a{
+
+                    a {
                         transition: all 0.4s ease-in-out;
                         opacity: 1;
 
-                        &:hover{
-                            color:rgb(239, 231, 231);
+                        &:hover {
+                            color: rgb(239, 231, 231);
                             opacity: 0.7;
-                            
+
                         }
 
                     }
 
-                
+
 
                 }
 
-                
-            }
-            &:nth-child(2){
 
-                button{
+            }
+
+            &:nth-child(2) {
+
+                button {
+                    background: rgb(66,90,237);
+background: linear-gradient(22deg, rgba(66,90,237,1) 50%, rgba(40,219,255,1) 100%);
                     font-family: $fontPrimary;
                     font-weight: bold;
 
                     padding: 0.5rem 2rem;
                 }
 
-                
+
             }
 
             @include mobileToDesktop {
                 margin: 0 0.5rem;
 
-                a{
+                a {
 
                     text-decoration: none;
                     color: $cloud;
@@ -227,5 +270,30 @@ list-style: none;
         }
 
     }
+
+}
+.cutom_option{
+
+background-color: $cloud;
+color: $white;
+padding: 0 0.5rem;
+
+}
+
+.leave_all{
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    padding: 0px 15px;
+
+    background-color: rgba(229, 219, 219, 0.352);
+    // height: 15px;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
 
 }
